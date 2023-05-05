@@ -1,0 +1,12 @@
+{
+  "pythonPath": "C:/Users/ashua/.virtualenvs/storefront-Gb7rE2_K/Scripts/python.exe",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "python.analysis.autoImportCompletions": true,
+  "python.languageServer": "Pylance",
+}
