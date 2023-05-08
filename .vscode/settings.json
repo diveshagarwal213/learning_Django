@@ -8,5 +8,8 @@
     }
   },
   "python.analysis.autoImportCompletions": true,
-  "python.languageServer": "Pylance",
+  "python.languageServer": "Default",
+  "cSpell.words": [
+    "orderitem"
+  ],
 }

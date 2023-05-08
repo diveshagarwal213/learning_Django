@@ -48,6 +48,7 @@ class Customer(models.Model):
     membership = models.CharField(
         max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE
     )
+    # order
 
 
 class Order(models.Model):
@@ -65,6 +66,7 @@ class Order(models.Model):
         max_length=1, choices=PAYMENT_STATUS_CHOICES, default=PAYMENT_STATUS_PENDING
     )
     customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
+    # orderitem_set (ManytoManyField)
 
 
 class OrderItem(models.Model):
