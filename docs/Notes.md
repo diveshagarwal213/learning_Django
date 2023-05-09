@@ -10,7 +10,7 @@ Create a project folder (Project Name) inside that folder Run
     
     pipenv install django
 
-+   This will create the pipfile and piplock file. 
++   This will create the pip-file and pip-lock file. 
 
 Sub Commands to help you to  
     

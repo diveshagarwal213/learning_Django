@@ -2,23 +2,19 @@ import json
 
 from django.contrib.contenttypes.models import ContentType
 from django.core.serializers import serialize
+from django.db import transaction
 from django.db.models import F, Q
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
-from store.models import OrderItem, Product
+from store.models import Order, OrderItem, Product
 from tags.models import TaggedItem
 
 
+# @transaction.atomic()
 def say_hello(request):
-    # content_type = tableName
-    content_type = ContentType.objects.get_for_model(Product)
-
-    # getting the Tags of That Item.
-    TaggedItem.objects.select_related("tag").filter(
-        content_type=content_type, object_id=1
-    )
-
+    print("gi")  # with transaction.atomic():
+    #     # ...actions
     # serialized_data = serialize("json", query_set, use_natural_foreign_keys=True)
     # serialized_data = json.loads(serialized_data)
 
@@ -89,3 +85,7 @@ def say_hello(request):
 # -------------
 # Custom Manager
 # How to Make your Own Manage Functions
+
+# ---
+# with transaction.atomic():
+#     # ...actions
