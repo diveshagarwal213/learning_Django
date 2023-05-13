@@ -1,5 +1,4 @@
 {
-  "pythonPath": "C:/Users/ashua/.virtualenvs/storefront-Gb7rE2_K/Scripts/python.exe",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
@@ -12,6 +11,7 @@
   "cSpell.words": [
     "orderitem",
     "pipenv",
+    "viewsets",
     "venv"
   ],
 }

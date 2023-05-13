@@ -19,6 +19,9 @@ class Collection(models.Model):
     def __str__(self):
         return self.title
 
+    # Reverse relationships
+    # products
+
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
@@ -33,6 +36,9 @@ class Product(models.Model):
         Collection, on_delete=models.PROTECT, related_name="products"
     )
     promotions = models.ManyToManyField(Promotion, blank=True)
+
+    # Reverse relationships
+    #   reviews
 
 
 class Customer(models.Model):
@@ -95,3 +101,12 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField()
+
+
+class Review(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="reviews"
+    )
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    date = models.DateField(auto_now_add=True)
