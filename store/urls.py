@@ -6,7 +6,7 @@ from . import views
 
 # router = SimpleRouter()
 router = routers.DefaultRouter()
-router.register("products", views.ProductViewSet)
+router.register("products", views.ProductViewSet, basename="products")
 
 # review Nested Routes
 products_routers = routers.NestedDefaultRouter(

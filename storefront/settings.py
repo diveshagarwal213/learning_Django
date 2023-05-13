@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_filters",
     "rest_framework",
     "playground",
     "debug_toolbar",
@@ -139,4 +140,10 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-REST_FRAMEWORK = {"COERCE_DECIMAL_TO_STRING": False}
+REST_FRAMEWORK = {
+    "COERCE_DECIMAL_TO_STRING": False,
+    # "PAGE_SIZE": 10,
+    # To Set all APIS As Pagination
+    # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+}

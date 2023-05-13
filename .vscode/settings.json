@@ -12,6 +12,7 @@
     "orderitem",
     "pipenv",
     "viewsets",
+    "filterset",
     "venv"
   ],
 }
