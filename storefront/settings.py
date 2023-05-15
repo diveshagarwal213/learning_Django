@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
+    "django.contrib.sessions",
     "django.contrib.contenttypes",
     "django.contrib.messages",
     "django.contrib.staticfiles",
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     "store",
     "tags",
     "likes",
+    "core",
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,5 @@ REST_FRAMEWORK = {
     # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
 }
+
+AUTH_USER_MODEL = "core.User"
