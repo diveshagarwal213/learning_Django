@@ -4,6 +4,8 @@ from django.conf import settings
 from django.core.validators import MinValueValidator
 from django.db import models
 
+from store import permissions
+
 
 class Promotion(models.Model):
     description = models.CharField(max_length=255)
@@ -65,8 +67,12 @@ class Customer(models.Model):
     def __str__(self) -> str:
         return f"{self.user.first_name}"
 
+    def first_name(self):
+        return self.user.first_name
+
     class Meta:
         ordering = ["user__first_name"]
+        permissions = [("view_history", "Can view history")]
 
 
 class Order(models.Model):

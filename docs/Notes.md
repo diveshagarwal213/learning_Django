@@ -31,7 +31,7 @@ Simply Run this command in the Project Folder
 
     pipenv install
 
-+ This will create a new env for you project and Auto install pakges
++ This will create a new env for you project and Auto install pages
 + you can now config the path to you IDE
 
 # To Create a App In You Project
@@ -40,3 +40,5 @@ Simply Run this command in the Project Folder
 + Don't forgot to register the app in the project 'setting.py > INSTALLED_APPS'
 
 
+//Token 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NDIyOTM4LCJpYXQiOjE2ODQzMzY1MzgsImp0aSI6IjE0ZDkwZmRlZDg4ZjQyYjRiNWRjNWRiZjcxZTBhOWU5IiwidXNlcl9pZCI6MX0.WmPut8rql_nKmHAu8umy8NnQkcbrQlv3QnRmJv0_XyY

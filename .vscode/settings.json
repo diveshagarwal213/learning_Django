@@ -9,10 +9,12 @@
   "python.analysis.autoImportCompletions": true,
   "python.languageServer": "Pylance",
   "cSpell.words": [
+    "djoser",
+    "filterset",
     "orderitem",
     "pipenv",
-    "viewsets",
-    "filterset",
-    "venv"
+    "simplejwt",
+    "venv",
+    "viewsets"
   ],
 }

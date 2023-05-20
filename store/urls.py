@@ -6,8 +6,12 @@ from . import views
 
 # router = SimpleRouter()
 router = routers.DefaultRouter()
-router.register("products", views.ProductViewSet, basename="products")
+router.register(
+    "products",
+    views.ProductViewSet,
+)
 router.register("carts", views.CartViewSet)
+router.register("customer", views.CustomerViewSet)
 
 # lookup => product_pk
 # basename="product-reviews" => "product-reviews-list", "product-reviews-details"

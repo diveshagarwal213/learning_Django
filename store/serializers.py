@@ -1,10 +1,11 @@
+from dataclasses import fields
 from decimal import Decimal
 from email import message
 from uuid import uuid4
 
 from rest_framework import serializers
 
-from store.models import Cart, CartItem, Collection, Product, Review
+from store.models import Cart, CartItem, Collection, Customer, Product, Review
 
 
 class CollectionSerializer(serializers.ModelSerializer):
@@ -133,3 +134,11 @@ class CartSerializer(serializers.ModelSerializer):
             [item.quantity * item.product.unit_price for item in cart.items.all()]
         )
         # return cart_item.quantity * cart_item.product.unit_price
+
+
+class CustomerSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Customer
+        fields = ["id", "user_id", "birth_date", "phone", "membership"]  # user_id
+
+    user_id = serializers.IntegerField(read_only=True)
